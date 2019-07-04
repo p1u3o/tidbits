@@ -3,8 +3,10 @@ Some things I do on Fedora Silverblue (best Linux desktop btw) to get software I
 
 - Contents
   - [Nano](#nano)
+  - [Nano](#nano)
   - [Android Tools (adb, fastboot etc)](#android-tools-adb-fastboot-etc)
   - [MS Core Fonts](#ms-core-fonts)
+  - [youtube-dl](#youtube-dl)
 
 ### Nano
 
@@ -79,5 +81,19 @@ cp -v fonts/*.ttf fonts/*.TTF ~/.local/share/fonts/mscorefonts/
 sudo mkdir /usr/local/share/fonts/
 sudo mkdir /usr/local/share/fonts/mscorefonts/
 sudo cp -v fonts/*.ttf fonts/*.TTF /usr/local/share/fonts/mscorefonts/
+```
+---
+
+### youtube-dl
+
+#### Python Fix
+```bash
+sudo ln -s /usr/bin/python3 /usr/local/bin/python
+```
+#### youtube-dl
+```bash
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+youtube-dl
 ```
 
