@@ -1,6 +1,13 @@
 # tidbits
 Various things I do on Silverblue to avoid having to overlay packages and containers, mainly for myself.
 
+- Things
+  - [Nano](#nano)
+  - [ADB](#android-platform-tools-adb-fastboot-etc)
+  - [MS Core Fonts](#corefonts)
+
+
+
 ### Nano
 
 #### Ncurses
