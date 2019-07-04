@@ -4,7 +4,7 @@ Some things I do on Fedora Silverblue (best Linux desktop btw) to get software I
 - Contents
   - [Nano](#nano)
   - [Android Tools (adb, fastboot etc)](#android-tools-adb-fastboot-etc)
-  - [MS Core Fonts](#ms-core-fonts)
+  - [MS Core Fonts](#ms-core-fonts) Arial, Courier, Times, Webdings etc
   - [youtube-dl](#youtube-dl)
 
 ### Nano
