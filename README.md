@@ -7,6 +7,7 @@ Some things I do on Fedora Silverblue (best Linux desktop btw) to get software I
   - [MS Core Fonts](#ms-core-fonts) Arial, Courier, Times, Webdings etc
   - [youtube-dl](#youtube-dl)
   - [wireguard](#wireguard)
+  - [Broadcom Wireless Driver (wl)](#broadcom)
 
 ### Nano
 
@@ -113,5 +114,25 @@ Reboot
 
 ```bash
 rpm-ostree install akmod-wireguard
+```
+Reboot
+
+---
+
+### Broadcom
+
+#### rpm fusion
+
+Enable RPM Fusion if you haven't already
+
+```bash
+sudo rpm-ostree install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+Reboot
+
+#### kmod
+
+```bash
+rpm-ostree install akmod-wl
 ```
 Reboot
