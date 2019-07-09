@@ -1,11 +1,12 @@
 # Silverblue tidbits
-Some things I do on Fedora Silverblue (best Linux desktop btw) to get software I want on the host without package overlaying. This is entirely for myself, but maybe others might find it useful.
+Some things I do on Fedora Silverblue (best Linux desktop btw) to get software I want on the host whilst trying to avoid package overlaying. This is entirely for myself, but maybe others might find it useful.
 
 - Contents
   - [Nano](#nano)
   - [Android Tools (adb, fastboot etc)](#android-tools-adb-fastboot-etc)
   - [MS Core Fonts](#ms-core-fonts) Arial, Courier, Times, Webdings etc
   - [youtube-dl](#youtube-dl)
+  - [wireguard](#wireguard)
 
 ### Nano
 
@@ -95,4 +96,22 @@ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/you
 sudo chmod a+rx /usr/local/bin/youtube-dl
 youtube-dl
 ```
+---
 
+### wireguard
+
+#### rpm fusion
+
+Enable RPM Fusion if you haven't already
+
+```bash
+sudo rpm-ostree install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+Reboot
+
+#### kmod
+
+```bash
+rpm-ostree install akmod-wireguard
+```
+Reboot
