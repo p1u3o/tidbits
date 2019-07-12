@@ -2,12 +2,40 @@
 Some things I do on Fedora Silverblue (best Linux desktop btw) to get software I want on the host whilst trying to avoid package overlaying. This is entirely for myself, but maybe others might find it useful.
 
 - Contents
+	- [Google Chrome](#google-chrome)
   - [Nano](#nano)
   - [Android Tools (adb, fastboot etc)](#android-tools-adb-fastboot-etc)
   - [MS Core Fonts](#ms-core-fonts) Arial, Courier, Times, Webdings etc
   - [youtube-dl](#youtube-dl)
   - [wireguard](#wireguard)
   - [Broadcom Wireless Driver (wl)](#broadcom)
+  - [NVIDIA](#nvidia)
+
+### Google Chrome
+It's a bad idea to install the Google Chrome RPM, you'll eventually get stuck in an update loop where the rpm keeps replacing the update each time.
+
+#### Repo
+
+```bash
+sudo -i
+```
+```bash
+cat << EOF > /etc/yum.repos.d/google-chrome.repo
+[google-chrome]
+name=google-chrome
+baseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64
+enabled=1
+gpgcheck=1
+gpgkey=https://dl.google.com/linux/linux_signing_key.pub
+EOF
+```
+
+#### Install
+
+```bash
+rpm-ostree install google-chrome-stable
+```
+---
 
 ### Nano
 
@@ -135,4 +163,34 @@ Reboot
 ```bash
 rpm-ostree install akmod-wl
 ```
+Reboot
+
+---
+
+### NVIDIA
+
+#### rpm fusion
+
+Enable RPM Fusion if you haven't already
+
+```bash
+sudo rpm-ostree install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+Reboot
+
+#### kmod & drivers
+
+```bash
+rpm-ostree install akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda
+rpm-ostree kargs --append=rd.driver.blacklist=nouveau --append=modprobe.blacklist=nouveau --append=nvidia-drm.modeset=1
+```
+
+#### initramfs
+
+If you want to make sure the nvidia driver is part of the initramfs, which allows the modesetting driver to work sooner (full screen boot logo), enable initramfs generation. I personally recommend this, although it comes at the cost of slower updates.
+
+```bash
+rpm-ostree initramfs --enable
+```
+
 Reboot
