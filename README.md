@@ -199,7 +199,9 @@ Reboot
 ---
 
 ### VSCode Tweaks
-#### Fix Terminal bash-4.4$ => [user@host project/src]$
+#### Fix Terminal Prompt
+
+bash-4.4$ => [user@host project/src]$
 
 Add to the end of your ~/.bashrc
 
