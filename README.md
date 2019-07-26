@@ -10,6 +10,7 @@ Some things I do on Fedora Silverblue (best Linux desktop btw) to get software I
   - [wireguard](#wireguard)
   - [Broadcom Wireless Driver (wl)](#broadcom)
   - [NVIDIA](#nvidia)
+  - [Visual Studio Code Tweaks](#vscode-tweaks)
 
 ### Google Chrome
 It's a bad idea to install the Google Chrome RPM, you'll eventually get stuck in an update loop where the rpm keeps replacing the update each time.
@@ -194,3 +195,16 @@ rpm-ostree initramfs --enable
 ```
 
 Reboot
+
+---
+
+### VSCode Tweaks
+#### Fix Terminal bash-4.4$ => [user@host project/src]$
+
+Add to the end of your ~/.bashrc
+
+```bash
+if [ "$FLATPAK_ID" == "com.visualstudio.code" ]; then
+	export PS1="[\u@\h \W]\\$ "
+fi
+```
