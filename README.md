@@ -8,7 +8,7 @@ Some things I do on Fedora Silverblue (best Linux desktop 😀️) to get softwa
   - [MS Core Fonts](#ms-core-fonts) Arial, Courier, Times, Webdings etc
   - [youtube-dl](#youtube-dl)
   - [wireguard](#wireguard)
-  - [Broadcom Wireless Driver (wl)](#broadcom)
+  - [Broadcom Wireless Driver (wl/b43)](#broadcom)
   - [NVIDIA](#nvidia)
   - [Visual Studio Code (Prompt & SDKs)](#vscode-tweaks)
 
