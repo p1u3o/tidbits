@@ -10,7 +10,7 @@ Some things I do on Fedora Silverblue (best Linux desktop btw) to get software I
   - [wireguard](#wireguard)
   - [Broadcom Wireless Driver (wl)](#broadcom)
   - [NVIDIA](#nvidia)
-  - [Visual Studio Code (Prompt & SDKs](#vscode-tweaks)
+  - [Visual Studio Code (Prompt & SDKs)](#vscode-tweaks)
 
 ### Google Chrome
 It's a bad idea to install the Google Chrome RPM, you'll eventually get stuck in an update loop where the rpm keeps replacing the update each time.
