@@ -1,5 +1,5 @@
 # Silverblue tidbits
-Some things I do on Fedora Silverblue (best Linux desktop btw) to get software I want on the host whilst trying to avoid package overlaying. This is entirely for myself, but maybe others might find it useful.
+Some things I do on Fedora Silverblue (best Linux  😀️) to get software I want on the host whilst trying to avoid package overlaying. This is entirely for myself, but maybe others might find it useful.
 
 - Contents
 	- [Google Chrome](#google-chrome)
@@ -244,4 +244,4 @@ These add compilers, runtimes etc these languages to Flatpak, and VSCode can see
 - Rust | org.freedesktop.Sdk.Extension.rust-stable
 
 You can find more by searching for them
-`flatpak search org.freedesktop.Sdk.Extension`
+`flatpak search org.freedesktop.Sdk.Extension`desktop
