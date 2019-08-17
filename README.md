@@ -159,10 +159,23 @@ sudo rpm-ostree install https://download1.rpmfusion.org/free/fedora/rpmfusion-fr
 ```
 Reboot
 
-#### kmod
+#### non-free driver (wl)
+
+This driver is not open source and is known to be unreliable. If possible use the alternative driver below if your hardware supports it.
 
 ```bash
 rpm-ostree install akmod-wl
+```
+Reboot
+
+#### free driver (b43)
+
+Please see [here](https://wireless.wiki.kernel.org/en/users/Drivers/b43#Supported_devices) that your hardware is supported before using this.
+
+The open source driver still needs firmware files.
+
+```bash
+rpm-ostree install http://download1.rpmfusion.org/nonfree/fedora/tainted/x86_64/Packages/b/b43-firmware-6.30.163.46-4.fc30.noarch.rpm
 ```
 Reboot
 
@@ -196,6 +209,12 @@ rpm-ostree initramfs --enable
 
 Reboot
 
+#### note
+
+Fedora has a fast updating kernel, sometimes the kernel can be updated before the nvidia driver does and rpm-ostree will fail to install updates.
+
+There is no need to worry when this happens, ostree is preventing your computer from updating to a point where it won't work. Simply wait a day or two for the nvidia driver to be updated or try enabling the testing repo `/etc/yum.repos.d/rpmfusion-nonfree-updates-testing.repo` to see if that already has a newer driver.
+
 ---
 
 ### VSCode Tweaks
@@ -210,3 +229,19 @@ if [ "$FLATPAK_ID" == "com.visualstudio.code" ]; then
 	export PS1="[\u@\h \W]\\$ "
 fi
 ```
+
+#### SDKs (PHP, Java, Golang, Rust etc)
+
+These add compilers, runtimes etc these languages to Flatpak, and VSCode can see these. They get installed to /usr/lib/sdk however VSCode will pickup a few automatically.
+
+`flatpak install <sdk>`
+
+- PHP | org.freedesktop.Sdk.Extension.openjdk[9-11]
+- Java | org.freedesktop.Sdk.Extension.php73
+- Node | org.freedesktop.Sdk.Extension.node10
+- Go | org.freedesktop.Sdk.Extension.golang
+- .NET | org.freedesktop.Sdk.Extension.dotnet
+- Rust | org.freedesktop.Sdk.Extension.rust-stable
+
+You can find more by searching for them
+`flatpak search org.freedesktop.Sdk.Extension`
