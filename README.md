@@ -249,7 +249,7 @@ You can find more by searching for them
 
 ### OSTree Prune
 
-If you're like me and have messed around with rebases, you may find /sysroot/ostree/repo becomes a multiple times larger than /usr itself, and `rpm-ostree cleanup` won't fix this.
+If you're like me and have messed around with rebases, you may find /sysroot/ostree/repo has become multiple times larger than /usr itself, and `rpm-ostree cleanup` won't fix this.
 
 Instead, you just need to prune. This freed up 15GB for me, but your results may vary depending on your rebases.
 
