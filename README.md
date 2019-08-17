@@ -1,5 +1,5 @@
 # Silverblue tidbits
-Some things I do on Fedora Silverblue (best Linux  😀️) to get software I want on the host whilst trying to avoid package overlaying. This is entirely for myself, but maybe others might find it useful.
+Some things I do on Fedora Silverblue (best Linux desktop 😀️) to get software I want on the host whilst trying to avoid package overlaying. This is entirely for myself, but maybe others might find it useful.
 
 - Contents
 	- [Google Chrome](#google-chrome)
