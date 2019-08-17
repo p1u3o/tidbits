@@ -236,8 +236,8 @@ These add compilers, runtimes etc these languages to Flatpak, and VSCode can see
 
 `flatpak install <sdk>`
 
-- PHP | org.freedesktop.Sdk.Extension.openjdk[9-11]
-- Java | org.freedesktop.Sdk.Extension.php73
+- Java | org.freedesktop.Sdk.Extension.openjdk[9-11]
+- PHP | org.freedesktop.Sdk.Extension.php73
 - Node | org.freedesktop.Sdk.Extension.node10
 - Go | org.freedesktop.Sdk.Extension.golang
 - .NET | org.freedesktop.Sdk.Extension.dotnet
