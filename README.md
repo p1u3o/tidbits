@@ -176,7 +176,7 @@ Please see [here](https://wireless.wiki.kernel.org/en/users/Drivers/b43#Supporte
 The open source driver still needs firmware files.
 
 ```bash
-rpm-ostree install http://download1.rpmfusion.org/nonfree/fedora/tainted/x86_64/Packages/b/b43-firmware-6.30.163.46-4.fc30.noarch.rpm
+rpm-ostree install http://download1.rpmfusion.org/nonfree/fedora/tainted/30/x86_64/Packages/b/b43-firmware-6.30.163.46-4.fc30.noarch.rpm
 ```
 Reboot
 
